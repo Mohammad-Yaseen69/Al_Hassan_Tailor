@@ -1,7 +1,6 @@
-import gsap from "gsap"
-import { useRef, useLayoutEffect } from "react"
 import { IntroAnimation } from "./components"
 import service from "./appwrite/DB&Storage";
+
 function App() {
   console.log(import.meta.env.VITE_APPWRITE_URL, "Hello man");
   function addProduct() {

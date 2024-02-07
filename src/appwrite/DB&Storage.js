@@ -34,10 +34,89 @@ export class Service {
         }
     }
 
-    async getProducts(){
+    async deleteProduct({id}){
+        try {
+            const product = await this.Database.deleteDocument(
+                import.meta.env.VITE_APPWRITE_DATABASE_ID,
+                import.meta.env.VITE_APPWRITE_COLLECTION_ID,
+                id
+            )
+
+            return product; 
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+
+    async listProducts() {
+        try {
+            const products = await this.Database.listDocuments(
+                import.meta.env.VITE_APPWRITE_DATABASE_ID,
+                import.meta.env.VITE_APPWRITE_COLLECTION_ID
+            )
+
+            return products
+        } catch (error) {
+            console.log(error);
+        }
 
     }
+    async getProduct({id}){
+        try {
+            const product = await this.Database.getDocument(
+                import.meta.env.VITE_APPWRITE_DATABASE_ID,
+                import.meta.env.VITE_APPWRITE_COLLECTION_ID,
+                id
+            )
+
+            return product
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    async uploadFile(file){
+        try {
+            const response = await this.Storage.createFile(
+                import.meta.env.VITE_APPWRITE_STORAGE_ID,
+                ID.unique(),
+                file
+            )
+
+            return response
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+   getFilePreview(fileId){
+        try {
+            const response = this.Storage.getFilePreview(
+                import.meta.env.VITE_APPWRITE_STORAGE_ID,
+                fileId
+            )
+
+            return response
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    async deleteFile(fileId){
+        try {
+            const response = this.Storage.deleteFile(
+                import.meta.env.VITE_APPWRITE_STORAGE_ID,
+                fileId
+            )
+
+            return response
+        } catch (error) {
+            console.log(error);
+        }
+    } 
 }
+
 
 const service = new Service()
 
