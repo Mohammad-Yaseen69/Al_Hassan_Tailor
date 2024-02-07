@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+vite.config.js
+.gitignore
+postcss.config.js
+.env
+.eslintrc.cjs
+package-lock.json
