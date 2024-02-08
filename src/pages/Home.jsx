@@ -1,7 +1,8 @@
 import React from 'react'
 import homeImg from '../assets/homeImg.jpg'
-import { Navbar } from '../components'
-import Hero from '../components/Hero/Hero'
+import { Navbar , CraftedElegance ,Hero} from '../components'
+
+
 
 const Home = () => {
     return (
@@ -11,6 +12,8 @@ const Home = () => {
                 <div class="absolute inset-0 bg-black -z-10 opacity-70"></div>
                 <Navbar />
                 <Hero />
+                <CraftedElegance />
+                <div className='h-screen'></div>
             </div>
         </div>
     )
