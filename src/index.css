@@ -158,3 +158,16 @@ input[type]:checked ~ span.mid {
   transform: translateX(-20px);
   opacity: 0;
 }
+
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  display: none; /* Background color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 2px; /* Rounded corners of the scrollbar thumb */
+}
