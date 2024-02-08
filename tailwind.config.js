@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        SpaceGrotesk: ["Space Grotesk", "sans-serif"]
+        SpaceGrotesk: ["Space Grotesk", "sans-serif"],
+        Montserrat : ["Montserrat", "sans-serif"]
       }
     }
   },
