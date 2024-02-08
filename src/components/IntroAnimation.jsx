@@ -1,12 +1,18 @@
-import React from 'react'
+import { useSelector } from 'react-redux'
+import React, { useEffect } from 'react'
 import gsap from "gsap"
 import { useRef, useLayoutEffect } from "react"
 import App from '../App'
+import { useDispatch } from 'react-redux'
+import { toggleComplete } from '../store/AnimationSlice'
 
 const IntroAnimation = () => {
     const refrence = useRef(null)
+    const dispatch = useDispatch()
+    const { completed } = useSelector(state => state.Animation)
 
-    useLayoutEffect(() => {
+
+    useEffect(() => {
         document.body.style.overflow = 'hidden';
 
         const context = gsap.context(() => {
@@ -41,6 +47,7 @@ const IntroAnimation = () => {
                     // Re-enable scrolling after animation completes
                     refrence.current.style.display = 'none';
                     document.body.style.overflow = 'auto';
+                    dispatch(toggleComplete())
                 }
             })
         }, refrence)
@@ -48,19 +55,18 @@ const IntroAnimation = () => {
         return () => {
             context.revert();
         };
-    }, [])
-
+    }, [refrence])
 
     return (
     
-            <div className="relative" ref={refrence}>
+            <div className={`relative z-50 ${completed && 'hidden'}`} ref={refrence}>
                 <div id="intro-slider" className="w-full h-screen flex flex-col justify-center bg-gray-100 gap-4 tracking-tight z-20 p-16 absolute left-0 top-0">
-                    <h1 className="text-[5vw] font-bold italic font-SpaceGrotesk " id="tx1"> Tailor </h1>
-                    <h1 className="text-[5vw] font-bold italic  font-SpaceGrotesk " id="tx2"> Dressmaker </h1>
-                    <h1 className="text-[5vw] font-bold italic  font-SpaceGrotesk " id="tx3"> Fashion </h1>
+                    <h1 className="text-[5vw]  max-ss:text-[7vw] max-sm:text-[6vw] font-bold italic font-SpaceGrotesk " id="tx1"> Tailor </h1>
+                    <h1 className="text-[5vw]  max-ss:text-[7vw] max-sm:text-[6vw] font-bold italic  font-SpaceGrotesk " id="tx2"> Dressmaker </h1>
+                    <h1 className="text-[5vw]  max-ss:text-[7vw] max-sm:text-[6vw] font-bold italic  font-SpaceGrotesk " id="tx3"> Fashion </h1>
                 </div>
                 <div id="main-container" className="w-full flex relative items-center justify-center z-10 h-screen bg-[#030713]">
-                    <h1 id="welcome" className="text-[5vw] font-bold font-SpaceGrotesk text-white">
+                    <h1 id="welcome" className="text-[5vw]  max-ss:text-[7vw] max-sm:text-[6vw]  font-bold font-RussoOne text-white">
                         Welcome
                     </h1>
                 </div>

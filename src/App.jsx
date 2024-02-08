@@ -1,11 +1,12 @@
 import { IntroAnimation } from "./components"
 import service from "./appwrite/DB&Storage";
 import Home from "./pages/Home";
+import { useSelector } from "react-redux";
 
 function App() {
-  console.log(import.meta.env.VITE_APPWRITE_URL, "Hello man");
-  function addProduct() {
+  const { completed } = useSelector(state => state.Animation)
 
+  function addProduct() {
     service.addProduct(
       {
         Img: '12222334456788',
@@ -24,10 +25,13 @@ function App() {
     )
   }
 
+
   return (
     <>
-      {/* <IntroAnimation /> */}
-      <Home />
+      <IntroAnimation />
+      <div className={`${completed ? 'static' : 'hidden'}`}>
+        <Home />
+      </div>
     </>
   )
 }
