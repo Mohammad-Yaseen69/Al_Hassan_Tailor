@@ -1,5 +1,6 @@
 import { IntroAnimation } from "./components"
 import service from "./appwrite/DB&Storage";
+import Home from "./pages/Home";
 
 function App() {
   console.log(import.meta.env.VITE_APPWRITE_URL, "Hello man");
@@ -26,7 +27,7 @@ function App() {
   return (
     <>
       {/* <IntroAnimation /> */}
-      <button onClick={addProduct}>Add </button>
+      <Home />
     </>
   )
 }
