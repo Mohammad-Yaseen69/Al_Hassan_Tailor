@@ -3,38 +3,14 @@ import ServiceCard from './ServiceCard';
 import service1 from '../../assets/service1.jpg'
 import service2 from '../../assets/service2.jpg'
 import service3 from '../../assets/service3.jpg'
-import { useSelector } from 'react-redux';
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/src/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger)
 
 const Services = () => {
-    const ref = useRef()
-    const { completed } = useSelector(state => state.Animation)
-
-    useEffect(() => {
-        if (completed) {
-            gsap.from(['#card1' , '#card2' , '#card3'] , {
-                opacity: 0,
-                stagger : 0.2,
-                duration : 0.4,
-                scrollTrigger : {
-                    trigger : ref.current,
-                    start : `top-=${400} center` ,
-                    end : 'bottom center' ,
-                    once : true,
-                    scrub : true,
-                }
-            })
-        }
-    }, [completed])
 
     return (
-        <div ref={ref} className='h-[70vh] max-md:h-full max-md:mt-44 flex justify-center items-center'>
+        <div className='h-[100vh]  max-md:h-full max-md:my-44 flex justify-center items-center'>
             <div className='w-full  rounded-full  p-8 '>
                 <h2 className='text-3xl font-bold mb-8 text-center'>Our Services</h2>
-                <div ref={ref} className='flex max-md:flex-col justify-center gap-11  items-center'>
+                <div className='flex max-md:flex-col justify-center gap-11  items-center'>
                     <ServiceCard
                         id='card1'
                         title='Custom Tailoring'

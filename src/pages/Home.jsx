@@ -12,8 +12,8 @@ const Home = () => {
                 <div class="absolute inset-0 bg-black -z-10 opacity-70"></div>
                 <Navbar />
                 <Hero />
-                <CraftedElegance />
                 <Services />
+                <CraftedElegance />
                 <Footer />
             </div>
         </div>

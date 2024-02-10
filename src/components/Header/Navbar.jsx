@@ -9,7 +9,7 @@ const Navbar = () => {
 
 
     return (
-        <div id='logo' className={`w-full transition-all duration-500 z-50`}>
+        <div id='logo' className={`w-full absolute transition-all duration-500 z-50`}>
             <div className='relative'>
                 <div className='w-full items-center  flex justify-between max-ss:ppx-0 py-3 px-6'>
                     <img src={logo} alt="" className='w-[100px] rounded-full h-[100px] object-[0px 100px] object-cover' />

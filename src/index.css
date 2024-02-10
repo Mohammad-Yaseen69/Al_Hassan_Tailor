@@ -164,7 +164,7 @@ input[type]:checked ~ span.mid {
 }
 
 ::-webkit-scrollbar-track {
-  display: none; /* Background color of the scrollbar track */
+  background-color: white; /* Background color of the scrollbar track */
 }
 
 ::-webkit-scrollbar-thumb {
