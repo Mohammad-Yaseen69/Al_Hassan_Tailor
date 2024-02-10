@@ -1,7 +1,8 @@
-import { IntroAnimation } from "./components"
+import { Footer, IntroAnimation, Navbar } from "./components"
 import service from "./appwrite/DB&Storage";
 import Home from "./pages/Home";
 import { useSelector } from "react-redux";
+import { Outlet } from "react-router-dom";
 
 function App() {
   const { completed } = useSelector(state => state.Animation)
@@ -27,12 +28,14 @@ function App() {
 
 
   return (
-    <>
+    <div className="relative">
       <IntroAnimation />
       <div className={`${completed ? 'static' : 'hidden'}`}>
-        <Home />
+        
+        <Outlet />
+        
       </div>
-    </>
+    </div>
   )
 }
 

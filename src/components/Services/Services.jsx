@@ -14,7 +14,7 @@ const Services = () => {
     const { completed } = useSelector(state => state.Animation)
 
     useEffect(() => {
-        // if (completed) {
+        if (completed) {
             gsap.from(['#card1' , '#card2' , '#card3'] , {
                 opacity: 0,
                 stagger : 0.2,
@@ -23,11 +23,11 @@ const Services = () => {
                     trigger : ref.current,
                     start : `top-=${400} center` ,
                     end : 'bottom center' ,
-                    scrub : 1 ,
-                    once : true 
+                    once : true,
+                    scrub : true,
                 }
             })
-        // }
+        }
     }, [completed])
 
     return (

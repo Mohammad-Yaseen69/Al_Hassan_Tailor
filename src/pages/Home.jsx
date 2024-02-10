@@ -1,6 +1,6 @@
 import React from 'react'
 import homeImg from '../assets/homeImg.jpg'
-import { Navbar , CraftedElegance ,Hero, Services} from '../components'
+import { Navbar , CraftedElegance ,Hero, Services, Footer} from '../components'
 
 
 
@@ -14,7 +14,7 @@ const Home = () => {
                 <Hero />
                 <CraftedElegance />
                 <Services />
-                <div className='h-screen'></div>
+                <Footer />
             </div>
         </div>
     )
