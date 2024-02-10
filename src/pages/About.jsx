@@ -1,9 +1,14 @@
 import React from 'react'
+import { Navbar, Footer } from '../components'
 
 const About = () => {
   return (
-    <div>About</div>
+    <>
+      <Navbar />
+      <div>About</div>
+      <Footer />
+    </>
   )
-}
+} 
 
 export default About
