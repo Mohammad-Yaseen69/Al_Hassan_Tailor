@@ -7,7 +7,7 @@ import service3 from '../../assets/service3.jpg'
 const Services = () => {
 
     return (
-        <div className='h-[100vh]  max-md:h-full max-md:my-44 flex justify-center items-center'>
+        <div className='h-[100vh]  max-md:h-auto  flex justify-center items-center'>
             <div className='w-full  rounded-full  p-8 '>
                 <h2 className='text-3xl font-bold mb-8 text-center'>Our Services</h2>
                 <div className='flex max-md:flex-col justify-center gap-11  items-center'>
