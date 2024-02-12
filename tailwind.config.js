@@ -12,7 +12,7 @@ export default {
         RussoOne : ["Russo One", "sans-serif"],
       },
       screens: {
-        xs: "480px",
+        xs: "596px",
         ss: "620px",
         sm: "768px",
         md: "1060px",
