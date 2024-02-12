@@ -9,9 +9,9 @@ const NavLinks = () => {
                 <Link key={index} to={link.url}>
                     <h1
                         id={`tx${index + 1}`}
-                        className='font-SpaceGrotesk font-bold max-ss:text-[5vw] max-md:text-[2.5vw] 
+                        className='menu__link relative font-SpaceGrotesk font-bold max-ss:text-[5vw] max-md:text-[2.5vw] 
                         text-[1.7vw] cursor-pointer transition-all duration-500 border-b-4
-                        border-transparent hover:border-red-400'
+                        border-transparent'
                     >
                         {link.name}
                     </h1>

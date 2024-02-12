@@ -3,6 +3,16 @@
 @tailwind utilities;
 
 
+@layer utilities {
+  .text-gradient {
+    background-image: linear-gradient(to right, #ffffff, #ff69b4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+
 .btn-12,
 .btn-12 *,
 .btn-12 :after,
@@ -170,4 +180,22 @@ input[type]:checked ~ span.mid {
 ::-webkit-scrollbar-thumb {
   background: #888; /* Color of the scrollbar thumb */
   border-radius: 2px; /* Rounded corners of the scrollbar thumb */
+}
+
+
+
+.menu__link::before {
+  content: '';
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -.25rem;
+  left: 0;
+  transition: width .4s;
+}
+
+.menu__link:hover::before {
+  width: 100%;
 }
