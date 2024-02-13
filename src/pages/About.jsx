@@ -1,11 +1,14 @@
 import React from 'react'
-import { Navbar, Footer } from '../components'
+import { Navbar, Footer, ProfileCard } from '../components'
+
 
 const About = () => {
   return (
     <>
       <Navbar />
-      <div>About</div>
+      <div className='h-screen w-full flex justify-center items-center'>
+        <ProfileCard />
+      </div>
       <Footer />
     </>
   )

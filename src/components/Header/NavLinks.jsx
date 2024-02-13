@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import links from '../../content/NavLinks';
 
 const NavLinks = () => {
@@ -6,7 +6,8 @@ const NavLinks = () => {
     return (
         <div className='flex max-sm:flex-col max-sm:items-center gap-11 text-white'>
             {links.map((link, index) => (
-                <Link key={index} to={link.url}>
+                <NavLink key={index}
+                    to={link.url}>
                     <h1
                         id={`tx${index + 1}`}
                         className='menu__link relative font-SpaceGrotesk font-bold max-ss:text-[5vw] max-md:text-[2.5vw] 
@@ -15,7 +16,7 @@ const NavLinks = () => {
                     >
                         {link.name}
                     </h1>
-                </Link>
+                </NavLink>
             ))}
         </div>
     );
