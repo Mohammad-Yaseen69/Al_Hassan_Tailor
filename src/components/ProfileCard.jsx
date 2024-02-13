@@ -7,7 +7,7 @@ const ProfileCard = () => {
     return (
         <div>
 
-            <div class="card">
+            <div class="card max-sm:w-[320px]">
                 <div className="overflow-hidden rounded-full w-32 h-32 mx-auto border-4 border-teal-500">
                     <img src={profile} alt="Profile Picture" className="object-cover object-[-10px] w-full h-full" />
                 </div>

@@ -31,9 +31,7 @@ function App() {
     <div className="relative">
       <IntroAnimation />
       <div className={`${completed ? 'static' : 'hidden'}`}>
-        
         <Outlet />
-        
       </div>
     </div>
   )

@@ -211,3 +211,18 @@ input[type]:checked~span.mid {
   background: lightgrey;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
 }
+
+@media (max-width: 760px) {
+  .card {
+    width: 400px !important;
+  }
+}
+
+@media (max-width: 420px){
+  .card{
+    width: 300px !important;
+  }
+  .mapdiv{
+    width: 300px;
+  }
+}
