@@ -79,7 +79,7 @@ export class Service {
     async uploadFile(file){
         try {
             const response = await this.Storage.createFile(
-                import.meta.env.VITE_APPWRITE_STORAGE_ID,
+                import.meta.env.VITE_APPWRITE_BUCKET_ID,
                 ID.unique(),
                 file
             )
@@ -93,7 +93,7 @@ export class Service {
    getFilePreview(fileId){
         try {
             const response = this.Storage.getFilePreview(
-                import.meta.env.VITE_APPWRITE_STORAGE_ID,
+                import.meta.env.VITE_APPWRITE_BUCKET_ID,
                 fileId
             )
 
@@ -106,7 +106,7 @@ export class Service {
     async deleteFile(fileId){
         try {
             const response = this.Storage.deleteFile(
-                import.meta.env.VITE_APPWRITE_STORAGE_ID,
+                import.meta.env.VITE_APPWRITE_BUCKET_ID,
                 fileId
             )
 
