@@ -14,7 +14,7 @@ export class Service {
         this.Storage = new Storage(this.Client)
     }
 
-    async addProduct({ Img, Title, Description, PriceAndSize }) {
+    async addProduct({ Img, Title, Description, Price ,Category }) {
         try {
             const product = await this.Database.createDocument(
                 import.meta.env.VITE_APPWRITE_DATABASE_ID,
@@ -24,7 +24,8 @@ export class Service {
                     Img,
                     Title,
                     Description,
-                    PriceAndSize,
+                    Category,
+                    Price,
                 }
             )
 

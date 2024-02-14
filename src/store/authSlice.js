@@ -12,8 +12,8 @@ const userSlice = createSlice({
     initialState,
     reducers : {
         login : (state, action) => {
-            state.isAdmin = action.payload.isAdmin
-            state.userData = action.payload.userData
+            state.isAdmin = true
+            state.userData = action.payload
         },
         logout : (state) => {
             state.isAdmin = false

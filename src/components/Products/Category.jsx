@@ -31,8 +31,8 @@ const Category = () => {
                 <div class="flex flex-wrap items-center justify-center -m-4">
                     <CategoryCard id="box1" img={Category1} title="Shirts" />
                     <CategoryCard id="box2" img={Category2} title="Kurta" />
-                    <CategoryCard id="box3" img={Category3} title="Wase Coat" />
-                    <CategoryCard id="box4" img={Category4} title="Shalwaar Kameez" />
+                    <CategoryCard id="box3" img={Category3} title="Wase-Coat" />
+                    <CategoryCard id="box4" img={Category4} title="Shalwaar-Kameez" />
                 </div>
             </div>
         </section>
