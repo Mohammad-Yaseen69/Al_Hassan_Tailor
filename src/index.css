@@ -200,6 +200,12 @@ input[type]:checked~span.mid {
   width: 100%;
 }
 
+.card2 {
+  border-radius: 20px;
+  background: lightgrey;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+}
+
 .card {
   width: 300px;
   display: flex;
@@ -218,11 +224,12 @@ input[type]:checked~span.mid {
   }
 }
 
-@media (max-width: 420px){
-  .card{
+@media (max-width: 420px) {
+  .card {
     width: 300px !important;
   }
-  .mapdiv{
+
+  .mapdiv {
     width: 300px;
   }
 }

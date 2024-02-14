@@ -29,10 +29,10 @@ function App() {
 
   return (
     <div className="relative">
-      <IntroAnimation />
-      <div className={`${completed ? 'static' : 'hidden'}`}>
+      {/* <IntroAnimation /> */}
+      {/* <div className={`${completed ? 'static' : 'hidden'}`}> */}
         <Outlet />
-      </div>
+      {/* </div> */}
     </div>
   )
 }
