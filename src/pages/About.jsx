@@ -20,7 +20,7 @@ const About = () => {
   return (
     <div>
       <Navbar />
-      <div className='h-[95vh] bg-[#005153] w-full gap-7 flex flex-col justify-center items-center'>
+      <div className='h-auto py-40 bg-[#005153] w-full gap-7 flex flex-col justify-center items-center'>
         <h1 id='title' className='text-[3.3vw] max-md:text-[4vw] max-sm:text-[5vw] max-ss:text-[7vw] font-bold text-white'>About Us</h1>
         <p
           id='content'

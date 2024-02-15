@@ -39,7 +39,7 @@ const Navbar = () => {
                     </div>
 
                     <div className={`max-sm:flex z-50 ${menuToggle ? 'left-0' : '-left-[1000px]'} bg-[#1C3144] transition-all duration-300 top-0 h-screen justify-center w-full  items-center  absolute hidden`}>
-                        <Navlinks />
+                        <Navlinks className='text-4xl'/>
                     </div>
                 </div>
             </div>
