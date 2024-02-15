@@ -1,9 +1,11 @@
 import React, { useRef, useLayoutEffect } from 'react';
 import gsap from 'gsap';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
     const refrence = useRef(null)
+    const navigate = useNavigate()
     const { completed } = useSelector(state => state.Animation)
 
     useLayoutEffect(() => {
@@ -24,7 +26,7 @@ const Hero = () => {
     }, [completed])
     return (
         <div ref={refrence} className='w-full  h-[100vh] flex flex-col gap-5 items-center justify-center'>
-            <div className='gap-5 items-center justify-center flex flex-col relative top-[10%]'>
+            <div className='gap-5 items-center justify-center flex flex-col relative top-[5%]'>
                 <h1
                     id='tx1'
                     className='text-white  max-ss:text-[6vw] max-sm:text-[5.5vw]  font-bold font-Montserrat text-[4vw]'>
@@ -37,7 +39,7 @@ const Hero = () => {
                     Transforming Fabric into Fashion, Crafting Unique Designs That Define Style, Elegance, and Personality, One Stitch at a Time. Experience Tailoring Excellence, Where Every Garment Tells a Story of Timeless Sophistication
                 </p>
 
-                <button id='btn' className="btn-12"><span>Products</span></button>
+                <button id='btn' onClick={() => navigate('products')} className="btn-12"><span>Products</span></button>
             </div>
         </div>
     )

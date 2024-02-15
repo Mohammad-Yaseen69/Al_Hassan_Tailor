@@ -28,7 +28,7 @@ const AddProductsForm = () => {
         try {
             const UploadFile = await service.uploadFile(data.Img)
             const ImgId = UploadFile.$id
-            console.log(data.Category);
+            
             const uploadData = {
                 Title: data.Title,
                 Description: data.Description,
