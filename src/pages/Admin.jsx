@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { AddProductsForm } from '../components'
 import auth from '../appwrite/auth'
-import { login } from '../store/authSlice'
+import { login, logout } from '../store/authSlice'
 
 
 const Admin = () => {
@@ -16,7 +16,12 @@ const Admin = () => {
     console.log(userData);
     useEffect(() => {
         auth.getCurrentUser().then((data) => {
-            dispatch(login(data))
+            if (data) {
+                dispatch(login(data))
+            }
+            else{
+                dispatch(logout(data))
+            }
         }).finally(() => {
             setLoading(false)
         })
@@ -24,8 +29,8 @@ const Admin = () => {
 
     const handleLogout = () => {
         auth.logout().then(() => {
-            dispatch(login())
-            navigate('login')
+            dispatch(logout())
+            navigate('/admin')
         })
     }
 

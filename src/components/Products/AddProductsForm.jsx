@@ -13,7 +13,7 @@ const AddProductsForm = () => {
         Title: '',
         Description: '',
         Price: '',
-        Category: '',
+        Category: 'shirts',
         Img: ''
     })
 
@@ -23,12 +23,12 @@ const AddProductsForm = () => {
             Title: '',
             Description: '',
             Price: '',
-            Category: '',
             Img: ''
         })
         try {
             const UploadFile = await service.uploadFile(data.Img)
             const ImgId = UploadFile.$id
+            console.log(data.Category);
             const uploadData = {
                 Title: data.Title,
                 Description: data.Description,
@@ -58,7 +58,7 @@ const AddProductsForm = () => {
 
                 <input required onChange={(e) => setData(prev => ({ ...prev, Img: e.target.files[0] }))} name="feedback" id="feedback" type="file" placeholder="Img" class="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" />
 
-                <select required value={data.Category} onChange={(e) => setData(prev => ({ ...prev, Category: e.target.value }))} aria-placeholder='Category' class="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" id="product">
+                <select required onChange={(e) => setData(prev => ({ ...prev, Category: e.target.value }))} aria-placeholder='Category' class="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" id="product">
 
                     {categories.map((category, index) => (
                         <option key={index} value={category}>

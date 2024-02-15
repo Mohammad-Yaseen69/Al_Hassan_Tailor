@@ -42,8 +42,7 @@ export class Auth {
     
     async logout(){
         try {
-            const user = await this.Account.deleteSession()
-
+            const user = await this.Account.deleteSessions()
             return user
         } catch (error) {
             console.log(error);

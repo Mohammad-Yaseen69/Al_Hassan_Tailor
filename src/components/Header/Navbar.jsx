@@ -6,7 +6,13 @@ const Navbar = () => {
 
     const [menuToggle, setMenuToggle] = useState(false);
 
-
+    useEffect(() => {
+        if (menuToggle) {
+            document.body.style.overflowY = 'hidden';
+        } else {
+            document.body.style.overflowY = 'auto';
+        }
+    }, [menuToggle]);
 
     return (
         <div id='logo' className={`w-full absolute transition-all duration-500 z-50`}>

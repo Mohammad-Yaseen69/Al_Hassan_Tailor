@@ -30,9 +30,9 @@ const Contact = () => {
     <>
       <Navbar />
       <div className='w-full relative'>
-        <div className='w-full max-sm:h-[95vh] h-[80vh] gap-6 flex-col flex items-center justify-center   max-xs:justify-end max-xs:pb-11  bg-[#005153]'>
+        <div className='w-full max-sm:h-[95vh] max-xs:h-[70vh] h-[80vh] gap-6 flex-col flex items-center justify-center   max-xs:justify-end max-xs:pb-11  bg-[#005153]'>
           <div>
-            <h1 className='text-[3.3vw] max-md:text-[4.3vw] max-sm:text-[5.2vw] max-ss:text-[7.3vw] font-bold text-white'>Get In Touch</h1>
+            <h1 className='text-[3.3vw] max-md:text-[4.3vw] max-sm:text-[5.2vw] max-ss:text-[7.3vw] max-xs:text-[8vw] font-bold text-white'>Get In Touch</h1>
           </div>
 
           <div className='flex max-xs:gap-x-11  gap-6 flex-wrap h-auto items-center justify-center'>
