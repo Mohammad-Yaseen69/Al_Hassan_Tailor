@@ -38,8 +38,8 @@ const Navbar = () => {
                         </label>
                     </div>
 
-                    <div className={`max-sm:flex z-50 ${menuToggle ? 'left-0' : '-left-[1000px]'} bg-[#1C3144] transition-all duration-300 top-0 h-screen justify-center w-full  items-center  absolute hidden`}>
-                        <Navlinks className='text-4xl'/>
+                    <div className={`max-sm:flex z-50 ${menuToggle ? 'left-0' : '-left-[1000px]'} bg-white transition-all duration-300 top-0 h-screen justify-center w-full  items-center  absolute hidden`}>
+                        <Navlinks className='text-3xl text-black'/>
                     </div>
                 </div>
             </div>

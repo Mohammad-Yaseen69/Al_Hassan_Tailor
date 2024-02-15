@@ -19,7 +19,7 @@ const IntroAnimation = () => {
             const tl = gsap.timeline()
             tl.from("#intro-slider", {
                 xPercent: '-100',
-                duration: 1,
+                duration: 0.8,
                 delay: 0.8,
             }).from(['#tx1', '#tx2', '#tx3'], {
                 y: '+=30',
@@ -32,12 +32,12 @@ const IntroAnimation = () => {
                 delay: 0.3
             }).to('#intro-slider', {
                 xPercent: '-100',
-                duration: 1,
+                duration: 0.8,
                 delay: 0.3,
             }).from('#welcome', {
                 y: '+=30',
                 opacity: 0,
-                duration: 1,
+                duration: 0.6,
                 delay: 0.3,
             }).to('#main-container', {
                 y: '-1000',
