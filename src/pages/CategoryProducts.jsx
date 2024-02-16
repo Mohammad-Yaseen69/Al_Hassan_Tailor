@@ -40,7 +40,7 @@ const CategoryProducts = () => {
         <div>
             <Navbar />
             <div className={`${loading ? 'h-screen' : 'h-auto'} py-28 w-full `}>
-                <h1 className='text-center my-7 relative max-ss:text-4xl font-RussoOne font-bold text-6xl bg-clip-text text-transparent bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700'>{category.toUpperCase()}</h1>
+                <h1 className='text-center my-7 relative max-ss:text-4xl font-RussoOne font-bold text-6xl bg-clip-text text-transparent bg-gradient-to-br from-white via-gray-300 to-gray-500'>{category.toUpperCase()}</h1>
 
                 {loading ? <div className='loader absolute top-[50%] left-[50%] '></div> :
                     <div className='flex flex-wrap gap-5 justify-center items-center w-full h-auto'>

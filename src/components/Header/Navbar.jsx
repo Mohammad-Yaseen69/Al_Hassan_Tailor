@@ -39,7 +39,8 @@ const Navbar = () => {
                     </div>
 
                     <div className={`max-sm:flex z-50 ${menuToggle ? 'left-0' : '-left-[1000px]'} bg-white transition-all duration-300 top-0 h-screen justify-center w-full  items-center  absolute hidden`}>
-                        <Navlinks className='text-3xl text-black'/>
+                        <Navlinks className='text-3q
+                        xl text-black'/>
                     </div>
                 </div>
             </div>

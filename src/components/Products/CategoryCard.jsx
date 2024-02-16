@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const CategoryCard = ({ title, img, text, id }) => {
+const CategoryCard = ({ title, img, content, id }) => {
     const navigate = useNavigate()
     return (
         <div id={id} class="xl:w-1/3 md:w-1/2 cursor-pointer p-4">
@@ -13,7 +13,7 @@ const CategoryCard = ({ title, img, text, id }) => {
                 </div>
                 <div>
                     <h2 class="text-2xl text-gray-900 font-bold font-Montserrat title-font mb-2">{title}</h2>
-                    <p class="leading-relaxed text-base">Fingerstache fle co, subway tile poke farm.</p>
+                    <p class="leading-relaxed text-base">{content}</p>
                 </div>
             </div>
         </div>

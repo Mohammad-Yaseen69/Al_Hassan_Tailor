@@ -24,15 +24,15 @@ const Category = () => {
         <section class="text-gray-600 w-full  flex h-auto justify-center items-center body-font">
             <div class="container  flex flex-col gap-6 px-5 my-32  mx-auto">
                 <div class="flex flex-wrap w-full  flex-col items-center text-center">
-                    <h1 class="sm:text-3xl text-2xl font-bold title-font mb-2 text-gray-900">
+                    <h1 class="sm:text-3xl text-2xl font-bold title-font mb-2 text-white">
                         Categories
                     </h1>
                 </div>
                 <div class="flex flex-wrap items-center justify-center -m-4">
-                    <CategoryCard id="box1" img={Category1} title="Shirts" />
-                    <CategoryCard id="box2" img={Category2} title="Kurta" />
-                    <CategoryCard id="box3" img={Category3} title="Wase-Coat" />
-                    <CategoryCard id="box4" img={Category4} title="Shalwaar-Kameez" />
+                    <CategoryCard id="box1" img={Category1} title="Shirts" content="Explore a variety of stylish and comfortable shirts tailored for you." />
+                    <CategoryCard id="box2" img={Category2} title="Kurta" content="Discover traditional and trendy kurtas tailored for men." />
+                    <CategoryCard id="box3" img={Category3} title="Wase-Coat" content="Elevate your look with our sophisticated tailor-made waistcoats." />
+                    <CategoryCard id="box4" img={Category4} title="Shalwaar-Kameez" content="Experience the elegance of tailor-made shalwar kameez suits." />
                 </div>
             </div>
         </section>

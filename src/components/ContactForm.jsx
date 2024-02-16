@@ -26,7 +26,7 @@ const ContactForm = ({setShowMessage}) => {
     }
     return (
         <div>
-            <div className="max-w-[400px] max-xs:max-w-[350px] my-11 w-full text-white mx-auto bg-[#0d1b2a] rounded-lg shadow-md p-4">
+            <div className="max-w-[400px] max-xs:max-w-[350px] my-11 w-full text-white mx-auto bg-[url(https://img.freepik.com/free-vector/overlapping-forms-background_52683-45675.jpg)] rounded-lg shadow-md p-4">
                 <form ref={ref} onSubmit={sendEmail}>
                     <div className="mb-4">
                         <label className="block mb-2 text-gray-50" htmlFor="name"> Name </label>
